@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*===Gradientes==*/
+
+header{
+    background-image: linear-gradient( to right, #e93535,rgb(214, 214, 109), #347be7);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+nav a{
+    padding: 20px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+nav a:hover{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.caja_padre {
+    display: grid;
+    grid-template-columns: repeat(4 , 25%);
+    grid-template-rows: repeat(3 , 250px);
+    gap: 4px;
+    grid-template-areas:"hijo_1 hijo_2 hijo_4 hijo_4"
+                        "hijo_1 hijo_3 hijo_4 hijo_4"
+                        "hijo_6 hijo_6 hijo_5 hijo_5"
+                        
+}
+
+
+.hijo_1{
+    
+    grid-area: hijo_1;
+    background-color: aqua;
+    width: 100%;
+}
+
+.hijo_2 {
+    grid-area: hijo_2;
+    background-color: beige;
+    justify-content: center;
+}
+
+.hijo_3{
+    grid-area: hijo_3;
+    background-color: blue;
+}
+
+.hijo_4{
+    grid-area: hijo_4;
+    background-color: blueviolet;
+}
+
+.hijo_5{
+    grid-area: hijo_5;
+    background-color: brown;
+}
+
+.hijo_6{
+    grid-area: hijo_6;
+    background-color: yellow;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .caja_padre {
+        display: grid;
+        grid-template-columns: repeat(2 , 50%);
+        grid-template-rows: repeat(4 , 200px);
+        gap: 4px;
+        grid-template-areas:"hijo_1 hijo_2 hijo_4 hijo_4"
+                            "hijo_1 hijo_3 hijo_4 hijo_4"
+                            "hijo_6 hijo_6 hijo_5 hijo_5"
+                            
+    }
+
+    .hijo_1{
+        grid-area: hijo_1;
+        background-color: rgb(55, 155, 46);
+    }
+    
+    .hijo_2 {
+        grid-area: hijo_2;
+        background-color: rgb(228, 228, 4);
+        justify-content: center;
+    }
+    
+    .hijo_3{
+        grid-area: hijo_3;
+        background-color: rgb(0, 217, 255);
+    }
+    
+    .hijo_4{
+        grid-area: hijo_4;
+        background-color: rgb(166, 134, 196);
+    }
+    
+    .hijo_5{
+        grid-area: hijo_5;
+        background-color: rgb(218, 17, 236);
+    }
+    
+    .hijo_6{
+        grid-area: hijo_6;
+        background-color: rgb(243, 90, 30);
+    }
+    
+
+}
+
+/*==Transform==*/
+
+img{
+    transition: width, height, 5s;
+}
+
+
+img:hover{
+    width: 300px;
+    height: 300px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+footer p{
+    animation: correr 1s infinite;
+}
+/*===Animaciones==*/
+@keyframes correr{
+    0%{ transform: translateX(0);
+
+    }
+
+    50%{   transform: translateX(100px);
+
+    }
+}
